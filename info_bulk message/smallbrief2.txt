@@ -1,0 +1,72 @@
+Mailer solution is to have 2 different softwares.
+
+
+1- Server.exe (it will be executed on my dedicated server which will listen to commands coming from Master.exe).
+   its job to convert server into direct mailer without SMTP
+   +add it self to startup
+
+2- Master.exe (it will be running on my home pc, where i will control Mail-list, Subject, DATA letters, MAIL FROM:, Reply-to. 
+   which going to be sent to server.exe and server will send emails using rotating proxies).
+
+
+* (communication/traffic between all softwares must be encrypted)
+
+
+
+About sending mails!
+
+
+if the reciept mail is @yahoo or rocketmail it will take MX server from
+
+MX-Yahoo.txt
+mta5.am0.yahoodns.net 25
+mta6.am0.yahoodns.net 25
+mta7.am0.yahoodns.net 25
+
+I guess we need to have MX-hotmail.txt , and MX-AOL.txt etc.. or i dont know if you can do it in a database.
+
+if any failed with yahoo try on the next one.
+
+-----------------------------------------------------------------
+you will add random-sub.domain.com, it will be better to have this editable from master, example: jfslmji64.smallchange.com
+%randC_7%.EHLO-RealDomains.txt
+
+EHLO-RealDomains.txt
+smallchange.com
+sonomacourt.org
+sonitrollexington.com
+socialcrime.com
+
+-----------------------------------------------------------------
+MAILFrom.txt
+%randC_6%@%randC_8%.com
+OrAny@mail.com
+
+-----------------------------------------------------------------
+RCPTTO.txt
+trainerlouise@yahoo.com
+anothertest@yahoo.com
+blablaaa@yahoo.com
+
+-----------------------------------------------------------------
+DATA
+
+from: %firstname %secondname <%randC_7%.EHLO-RealDomains.txt>
+
+to: trainerlouise@yahoo.com
+
+Subject.txt
+Promition about our lessons.
+Order Confirmation
+Your Invoice.
+-----------------------------------------------------------------
+
+MailLetter1.txt
+This is a real test!
+
+-----------------------------------------------------------------
+MailLetter2.txt
+Please check our new products www.hell.com
+
+Your Love,
+Yakov

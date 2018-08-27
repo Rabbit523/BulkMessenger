@@ -1,0 +1,26 @@
+telnet 
+mta5.am0.yahoodns.net 25
+
+
+EHLO jfslmji64.smallchange.com
+MAIL From: <jfslmji64@smallchange.com>
+
+
+RCPT TO:<trainerlouise@yahoo.com>
+
+DATA
+
+
+from: Can BrandName <jfslmji64@smallchange.com>
+
+to: trainerlouise@yahoo.com
+
+Subject: By Yakov Mail
+
+This is a real test!
+
+Your Love,
+Yakov
+
+.
+then enter

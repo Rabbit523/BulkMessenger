@@ -1,0 +1,13 @@
+Mailer solution is to have 2 different softwares.
+
+
+1- Server.exe (it will be executed on my dedicated server which will listen to commands coming from Master.exe).
+   its job to convert server into direct mailer without SMTP
+   +add it self to startup
+
+2- Master.exe (it will be running on my home pc, where i will control Mail-list, Subject, DATA letters, MAIL FROM:, Reply-to. 
+   which going to be sent to server.exe and server will send emails using rotating proxies).
+
+
+* (communication/traffic between all softwares must be encrypted)
+
